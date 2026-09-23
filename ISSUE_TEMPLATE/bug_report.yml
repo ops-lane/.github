@@ -1,45 +1,74 @@
-name: "\U0001F41B Bug report"
-description: Er werkt iets niet zoals verwacht
+name: "🐛 Bug report"
+description: Something is not working as expected.
 title: "[Bug]: "
 labels: ["bug"]
 body:
-  - type: textarea
-    id: what-happened
+  - type: markdown
     attributes:
-      label: Wat gebeurt er?
-      description: Beschrijf het probleem zo concreet mogelijk.
+      value: |
+        Thanks for reporting a bug. Please fill in as much as you can so we can reproduce it quickly.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the problem.
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: Wat had je verwacht?
+      label: Expected behaviour
+      description: What did you expect to happen instead?
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: steps
     attributes:
-      label: Stappen om te reproduceren
+      label: Steps to reproduce
       placeholder: |
-        1. Ga naar ...
-        2. Klik op ...
-        3. ...
+        1. Go to ...
+        2. Click on ...
+        3. See error ...
     validations:
       required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low – cosmetic or minor inconvenience
+        - Medium – feature partially broken, workaround available
+        - High – feature broken, no workaround
+        - Critical – outage, data loss or blocks all users
+    validations:
+      required: true
 
   - type: input
     id: environment
     attributes:
-      label: Omgeving
-      placeholder: "bv. iPhone Safari/PWA, desktop Chrome, productie/testing.thuisritme.nl"
+      label: Environment
+      description: Where did this happen?
+      placeholder: "e.g. production / staging, iOS Safari 18, Chrome 130 on macOS, version 1.4.2"
     validations:
       required: false
 
   - type: textarea
-    id: extra
+    id: logs
     attributes:
-      label: Screenshots / extra context
+      label: Logs / error output
+      description: Paste any relevant log output. This will be rendered as code.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Screenshots / additional context
+      description: Drag and drop screenshots here, or add anything else that may help.
     validations:
       required: false

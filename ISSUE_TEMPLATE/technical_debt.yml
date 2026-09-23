@@ -1,0 +1,60 @@
+name: "🧹 Technical debt"
+description: Code, infrastructure or dependencies that need refactoring, cleanup or upgrading.
+title: "[Tech debt]: "
+labels: ["tech-debt"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the debt, and where does it live?
+      placeholder: "e.g. The payment module uses a deprecated API client in `app/payments/client.py`."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Why does this matter? Think of maintainability, performance, reliability, developer speed or security.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+      description: How should we tackle this?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated effort
+      options:
+        - Small (hours)
+        - Medium (days)
+        - Large (weeks)
+        - Unknown
+    validations:
+      required: false
+
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk of leaving it as is
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Related issues, links, affected files or components.
+    validations:
+      required: false
