@@ -32,6 +32,7 @@
 - [ ] No secrets, credentials or personal data are included
 - [ ] Database migrations / deployment steps are described (if any)
 
+
 ## Notes for reviewers
 
 <!-- Anything reviewers should pay extra attention to. Remove if not applicable. -->

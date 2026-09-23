@@ -12,7 +12,8 @@ Report them privately instead:
 2. Click **Report a vulnerability**.
 3. Fill in the form with as much detail as possible.
 
-If that option is not available, contact us by email at **security@example.com** <!-- TODO: replace with the real address -->.
+<!-- TODO:
+If that option is not available, contact us by email at **security@example.com**  replace with the real address. -->
 
 ### What to include
 
