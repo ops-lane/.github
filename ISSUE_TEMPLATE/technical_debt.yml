@@ -1,4 +1,4 @@
-name: "🧹 Technical debt"
+name: "Technical debt"
 description: Code, infrastructure or dependencies that need refactoring, cleanup or upgrading.
 title: "[Tech debt]: "
 labels: ["tech-debt"]

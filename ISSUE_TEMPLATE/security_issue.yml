@@ -1,4 +1,4 @@
-name: "🔒 Security issue"
+name: "Security issue"
 description: Report a security weakness or hardening task. Do NOT use this for exploitable vulnerabilities.
 title: "[Security]: "
 labels: ["security"]
