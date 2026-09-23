@@ -1,0 +1,80 @@
+name: "🔒 Security issue"
+description: Report a security weakness or hardening task. Do NOT use this for exploitable vulnerabilities.
+title: "[Security]: "
+labels: ["security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!WARNING]
+        > **Issues are visible to everyone with access to this repository.**
+        > If you found an exploitable vulnerability, do **not** open an issue. Report it privately via
+        > **Security → Report a vulnerability** on this repository, or contact the maintainers directly.
+        >
+        > Use this template for non-sensitive items such as hardening tasks, outdated dependencies with known CVEs, or missing security headers.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: This issue does not contain sensitive details (credentials, exploit steps, personal data).
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the security concern?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Vulnerable dependency (CVE)
+        - Authentication / authorisation
+        - Configuration / hardening
+        - Data protection / privacy
+        - Infrastructure / network
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Estimated severity
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected components
+      description: Which parts of the system, services or versions are affected?
+    validations:
+      required: false
+
+  - type: textarea
+    id: remediation
+    attributes:
+      label: Suggested remediation
+      description: How could this be fixed or mitigated?
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: CVE IDs, advisories, documentation links.
+    validations:
+      required: false
